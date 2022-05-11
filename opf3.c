@@ -73,7 +73,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	for (; ptr; ptr = ptr->next)
 	{
 		i = ptr->n;
-		if ((i > 64 && i < 91) || (i > 96 && i < 123))
+		if (i > 0 && i <= 127)
 			putchar(ptr->n);
 		else
 			break;
