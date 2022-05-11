@@ -42,10 +42,10 @@ void pchar(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	i = (*stack)->n;
-	if ((i > 64 && i < 91) || (i > 96 && i < 123))
+	if (i >= 0 && i <= 127)
 	{
 		putchar((*stack)->n);
-		putchar(10);
+		putchar('\n');
 		return;
 	}
 	fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
