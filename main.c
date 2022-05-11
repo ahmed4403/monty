@@ -13,5 +13,5 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	read_line(argv[1]);
-	return (EXIT_SUCCESS);
+	return (0);
 }
