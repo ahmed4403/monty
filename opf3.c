@@ -35,7 +35,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d>: can't pchar, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
 		free(vars.buffer);
 		free_list(stack);
 		fclose(vars.stream);
@@ -70,8 +70,9 @@ void pstr(stack_t **stack, unsigned int line_number)
 		if (ptr->n == 0)
 			return;
 	}
-	for (i = (*stack)->n; ptr; ptr = ptr->next, i = ptr->n)
+	for (; ptr; ptr = ptr->next)
 	{
+		i = ptr->n;
 		if ((i > 64 && i < 91) || (i > 96 && i < 123))
 			putchar(ptr->n);
 		else
