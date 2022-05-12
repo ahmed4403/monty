@@ -24,6 +24,8 @@ void check_func(stack_t **stack, char *tokken0, unsigned int line_number)
 		{"pstr", pstr},
 		{"rotl", rotl},
 		{"rotr", rotr},
+		{"stack", stack1},
+		{"queue", queue1},
 		{NULL, NULL}
 	};
 

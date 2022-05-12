@@ -49,6 +49,7 @@ typedef struct vars
 	FILE *stream;
 	char *buffer;
 	int value;
+	char *mode;
 } gl;
 extern gl vars;
 
@@ -72,5 +73,8 @@ void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
+void push_end(stack_t **stack);
+void stack1(stack_t **stack, unsigned int line_number);
+void queue1(stack_t **stack, unsigned int line_number);
 
 #endif

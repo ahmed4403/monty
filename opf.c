@@ -10,6 +10,11 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *new;
 
 	(void)line_number;
+	if (strcmp(vars.mode, "queue") == 0)
+	{
+		push_end(stack);
+		return;
+	}
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
