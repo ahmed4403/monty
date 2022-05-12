@@ -13,6 +13,7 @@ void read_line(char *file_name)
 	size_t size = 1;
 	stack_t *stack = NULL;
 
+	vars.mode = "";
 	vars.buffer = NULL;
 	vars.stream = fopen(file_name, "r");
 	if (vars.stream == NULL)
