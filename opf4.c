@@ -2,7 +2,6 @@
 /**
  * push_end - check the code
  * @stack: number of arguments
- * @line_number: arguments
  * Return: Always EXIT_SUCCESS.
  */
 void push_end(stack_t **stack)
@@ -52,7 +51,7 @@ void stack1(stack_t **stack, unsigned int line_number)
  */
 void queue1(stack_t **stack, unsigned int line_number)
 {
-        vars.mode = "queue";
-        (void)stack;
-        (void)line_number;
+	vars.mode = "queue";
+	(void)stack;
+	(void)line_number;
 }
