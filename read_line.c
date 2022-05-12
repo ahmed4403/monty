@@ -66,7 +66,7 @@ int _isdigit(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (c[i] <= 47 || c[i] >= 58)
+		if (c[0] != '-' && (c[i] <= 47 || c[i] >= 58))
 		{
 			return (0);
 		}
